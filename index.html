@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>2GIS: Тестовое задание</title>
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <div class="background__сontainer"></div>
+      <ul class="cards__list"></ul>
+    </div>
+
+    <script id="template" type="text/x-handlebars-template">
+      {{#each cards}}
+        <li class="cards__item cards__type_{{type}}">
+          <div class="cards__number">
+            <span>
+                {{AddOneTo @index}}
+            </span>
+          </div>
+        </li>
+      {{/each}}
+    </script>
+
+    <script src="js/handlebars.js"></script>
+    <script src="js/handlebars-helpers.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/index.js"></script>
+
+  </body>
+</html>
